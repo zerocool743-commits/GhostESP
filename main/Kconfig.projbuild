@@ -623,7 +623,7 @@ menu "Ghost ESP Options"
 
         config HAS_NRF24_REMOTE
             bool "Enable NRF24 Remote (display controls via GhostLink peer)"
-            default n
+            default y
             help
                 Enable NRF24 analyzer controls on a display controller that routes
                 commands to a paired NRF24-capable peer over GhostLink/commsend.
@@ -984,7 +984,7 @@ menu "Ghost ESP Options"
 
             config HAS_NRF24
                 bool "Enable NRF24 App"
-                default n
+                default y
                 help
                     Enable the NRF24 app menu and frequency analyzer view.
 
@@ -998,35 +998,35 @@ menu "Ghost ESP Options"
 
             config NRF24_SPI_MOSI_PIN
                 int "NRF24 MOSI Pin"
-                default 14
+                default 11
                 depends on HAS_NRF24
                 help
                     GPIO pin for NRF24 MOSI.
 
             config NRF24_SPI_MISO_PIN
                 int "NRF24 MISO Pin"
-                default 21
+                default 13
                 depends on HAS_NRF24
                 help
                     GPIO pin for NRF24 MISO.
 
             config NRF24_SPI_SCK_PIN
                 int "NRF24 SCK Pin"
-                default 13
+                default 15
                 depends on HAS_NRF24
                 help
                     GPIO pin for NRF24 SCK.
 
             config NRF24_CSN_PIN
                 int "NRF24 CSN Pin"
-                default 12
+                default 18
                 depends on HAS_NRF24
                 help
                     GPIO pin for NRF24 CSN.
 
             config NRF24_CE_PIN
                 int "NRF24 CE Pin"
-                default 11
+                default 8
                 depends on HAS_NRF24
                 help
                     GPIO pin for NRF24 CE.
